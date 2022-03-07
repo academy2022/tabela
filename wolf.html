@@ -7,265 +7,119 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Wolf</title>
     <style>
-        table,
-        th,
-        td {
-            border: 1px solid black;
-            text-align: center;
-        }
+    table, th, td {
+        border: 1px solid black;
+    }
+
+    td {
+        height: 30px;  
+        width:30px;      
+        text-align: center;
+        vertical-align: middle;
+    }
+
+    th {
+        width:120px;
+        height: 30px;
+    }
+
     </style>
+
 </head>
 
 <body>
 
-    <!-- <img src="data:image/jpeg;base64,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"
-        alt="Foto e nje ujku" height="400px" width="400px">
+    <h1> <a href="https://en.wikipedia.org/wiki/Wolf">Wolf</a> </h1>
+    <h2>Etymology</h2>
+    <p>
+        The English "wolf" stems from the Old English wulf, which is itself thought to be derived from the
+        Proto-Germanic *wulfaz. The Proto-Indo-European root *wĺ̥kʷos may also be the source of the Latin word for the
+        animal lupus (*lúkʷos). The name "gray wolf" refers to the grayish colour of the species.
 
-    <a href="https://en.wikipedia.org/wiki/Wolf">
-        <h1>Kliko ketu per te shkuar te faqja</h1>
-    </a>
+        Since pre-Christian times, Germanic peoples such as the Anglo-Saxons took on wulf as a prefix or suffix in their
+        names. Examples include<br> Wulfhere ("Wolf Army"),<br> Cynewulf ("Royal Wolf"),<br> Cēnwulf ("Bold Wolf"),<br> Wulfheard
+        ("Wolf-hard"),<br> Earnwulf ("Eagle Wolf"),<br> Wulfstān ("Wolf Stone"),<br> Æðelwulf ("Noble Wolf"),<br> Wolfhroc
+        ("Wolf-Frock"),<br> Wolfhetan ("Wolf Hide"),<br> Scrutolf ("Garb Wolf"),<br> Wolfgang ("Wolf Gait")<br> and Wolfdregil ("Wolf
+        Runner").
+    </p>
 
-    <h2>Intro</h2>
-    <p>The wolf (Canis lupus[b]), also known as the gray wolf or grey wolf, is a large canine native to Eurasia and
-        North America. More than thirty subspecies of Canis lupus have been recognized, and gray wolves, as popularly
-        understood, comprise wild subspecies. The wolf is the largest extant member of the family Canidae. It is also
-        distinguished from other Canis species by its less pointed ears and muzzle, as well as a shorter torso and a
-        longer tail. The wolf is nonetheless related closely enough to smaller Canis species, such as the coyote and the
-        golden jackal, to produce fertile hybrids with them. The banded fur of a wolf is usually mottled white, brown,
-        gray, and black, although subspecies in the arctic region may be nearly all white.
-    </p>
-    <h2>Description</h2>
-    <p>Of all members of the genus Canis, the wolf is most specialized for cooperative game hunting as demonstrated by
-        its physical adaptations to tackling large prey, its more social nature, and its highly advanced expressive
-        behaviour including individual or group howling. It travels in nuclear families consisting of a mated pair
-        accompanied by their offspring. Offspring may leave to form their own packs on the onset of sexual maturity and
-        in response to competition for food within the pack. Wolves are also territorial and fights over territory are
-        among the principal causes of wolf mortality. The wolf is mainly a carnivore and feeds on large wild hooved
-        mammals as well as smaller animals, livestock, carrion, and garbage. Single wolves or mated pairs typically have
-        higher success rates in hunting than do large packs. Pathogens and parasites, notably rabies virus, may infect
-        wolves.
-    </p>
+    <hr>
+
     <h2>Taxonomy</h2>
-    <p>In 1758, the Swedish botanist and zoologist Carl Linnaeus published in his Systema Naturae the binomial
-        nomenclature.[4] Canis is the Latin word meaning "dog",[10] and under this genus he listed the doglike
+    <p>
+        In 1758, the Swedish botanist and zoologist Carl Linnaeus published in his Systema Naturae the binomial
+        nomenclature. Canis is the Latin word meaning "dog", and under this genus he listed the doglike
         carnivores including domestic dogs, wolves, and jackals. He classified the domestic dog as Canis familiaris, and
-        the wolf as Canis lupus.[4] Linnaeus considered the dog to be a separate species from the wolf because of its
-        "cauda recurvata" (upturning tail) which is not found in any other canid
+        the wolf as Canis lupus. Linnaeus considered the dog to be a separate species from the wolf because of its
+        "cauda recurvata" (upturning tail) which is not found in any other canid.
     </p>
-    <ul>
-        <li><span class="hello1">una</span></li>
-        <li><span class="hello2">una</span></li>
-        <li><span class="hello3">una</span></li>
-    </ul> -->
-        <!-- <table>
-            <tr>
-        <thead>
-                <th rowspan="2">&nbsp;</th>
-                <th colspan="2">Kimi</th>
-                <th rowspan="2">Matematik</th>
-                <th rowspan="2">Letersi</th>
-                <th rowspan="2">Informatik</th>
-                <th rowspan="2">Fiskultur</th>
-            </tr>
-            <tr>
-                <th>Provim</th>
-                <th>Dsh</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td>Student 1</td>
-                <td>8</td>
-                <td>9</td>
-                <td>9</td>
-                <td>8</td>
-                <td>#</td>
-            </tr>
 
-            <tr>
-                <td>student2</td>
-                <td>5</td>
-                <td>7</td>
-                <td>8</td>
-                <td>4</td>
-                <td>6</td>
-            </tr>
-            <tr>
-                <td>student3</td>
-                <td>8</td>
-                <td>7</td>
-                <td>7</td>
-                <td>5</td>
-                <td>7</td>
-            </tr>
-        </tbody>
-        ><tfoot>
-            <tr>
-                <td>student4</td>
-                <td>10</td>
-                <td>10</td>
-                <td>10</td>
-                <td>10</td>
-                <td>10</td>
-            </tr>
-        </tfoot>
-                
-           
-        </table> -->
+    <hr>
 
-        <table>
-            <thead>
-                <tr>
-                    <th colspan="2">&nbsp</th>
-                    <th  >Name</th>
-                    <th  >Mass <br> (10<sup>24</sup>kg)</th>
-                    <th  >Diameter <br> (km)</th>
-                    <th  >Density <br> (kg/m<sup>3</sup>)</th>
-                    <th  >Gravity <br> (m/s<sup>s</sup>)</th>
-                    <th  >Length of <br>day (hours)</th>
-                    <th >Distance from <br>Sun (10<sup>6</sup>)</th>
-                    <th  >Mean<br>temperature<br>(&deg;C)</th>
-                    <th  >Number of <br>Moons</th>
-                    <th  >Notes</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td colspan="2" rowspan="4">Terrestrial planets</td>
-                    <td>Mercury</td>
-                    <td>0.330</td>
-                    <td>4.879</td>
-                    <td>4222.6</td>
-                    <td>57.9</td>
-                    <td>167</td>
-                    <td>57.9</td>
-                    <td>167</td>
-                    <td>0</td>
-                    <td >Closest to the Sun</td>
-                </tr>
-                <tr>
-                    <td>Mercury</td>
-                    <td>0.330</td>
-                    <td>4.879</td>
-                    <td>4222.6</td>
-                    <td>57.9</td>
-                    <td>167</td>
-                    <td>57.9</td>
-                    <td>167</td>
-                    <td>0</td>
-                    <td ></td>
-                </tr>
-                <tr>
-                    
-                    <td>Mercury</td>
-                    <td>0.330</td>
-                    <td>4.879</td>
-                    <td>4222.6</td>
-                    <td>57.9</td>
-                    <td>57.9</td>
-                    <td>167</td>
-                    <td>167</td>
-                    <td>0</td>
-                    <td >Our planet</td>
-                </tr>
-                <tr>
-                   
-                    <td>Mercury</td>
-                    <td>0.330</td>
-                    <td>4.879</td>
-                    <td>4222.6</td>
-                    <td>57.9</td>
-                    <td>57.9</td>
-                    <td>167</td>
-                    <td>167</td>
-                    <td>0</td>
-                    <td >Red planet</td>
-                </tr>
+    <h2>Description</h2>
+    <p>
+        The wolf is the largest extant member of the Canidae family, and is further distinguished from coyotes and
+        jackals by a broader snout, shorter ears, a shorter torso and a longer tail. It is slender and
+        powerfully built, with a large, deeply descending rib cage, a sloping back, and a heavily muscled neck. The
+        wolf's legs are moderately longer than those of other canids, which enables the animal to move swiftly, and to
+        overcome the deep snow that covers most of its geographical range in winter. The ears are relatively small
+        and triangular. The wolf's head is large and heavy, with a wide forehead, strong jaws and a long, blunt
+        muzzle. The skull is 230-280 mm (9-11 in) in length and 130-150 mm (5-6 in) in width. The teeth are
+        heavy and large, making them better suited to crushing bone than those of other canids. They are not as
+        specialized as those found in hyenas though. Its molars have a flat chewing surface, but not to the same
+        extent as the coyote, whose diet contains more vegetable matter. Females tend to have narrower muzzles and
+        foreheads, thinner necks, slightly shorter legs, and less massive shoulders than males.
+    </p>
 
-                <tr>
-                    <td  rowspan="4"> Jovian planets </td>
-                    <td rowspan="2">Gas giants</td>
-                    <td>Mercury</td>
-                    <td>0.330</td>
-                    <td>4.879</td>
-                    <td>4222.6</td>
-                    <td>57.9</td>
-                    <td>57.9</td>
-                    <td>167</td>
-                    <td>167</td>
-                    <td>0</td>
-                    <td >The largest plannet</td>       
-                </tr>
-                <tr>
-                    <td>Mercury</td>
-                    <td>0.330</td>
-                    <td>4.879</td>
-                    <td>4222.6</td>
-                    <td>57.9</td>
-                    <td>57.9</td>
-                    <td>167</td>
-                    <td>167</td>
-                    <td>0</td>
-                    <td ></td>
-                </tr>
-                <tr>
-                    <th rowspan="2">Ice giants</th>
-                    <td>Mercury</td>
-                    <td>0.330</td>
-                    <td>4.879</td>
-                    <td>4222.6</td>
-                    <td>57.9</td>
-                    <td>57.9</td>
-                    <td>167</td>
-                    <td>167</td>
-                    <td>0</td>
-                    <td ></td>
-                </tr>
-                <tr>
-                    <td>Mercury</td>
-                    <td>0.330</td>
-                    <td>4.879</td>
-                    <td>4222.6</td>
-                    <td>57.9</td>
-                    <td>57.9</td>
-                    <td>167</td>
-                    <td>167</td>
-                    <td>0</td>
-                    <td ></td>
-                </tr>
-                <tr>
-                    <td colspan="2">Dwarf</td>
-                    <td>Mercury</td>
-                    <td>0.330</td>
-                    <td>4.879</td>
-                    <td>4222.6</td>
-                    <td>57.9</td>
-                    <td>167</td>
-                    <td>57.9</td>
-                    <td>167</td>
-                    <td>0</td>
-                    <td >Declassified as a planet in 2006 ,but this <a href="https://code.visualstudio.com/docs/editor/emmet">remains controvesial</a>.</td>
-                </tr>
-            </tbody>
+    <hr>
+
+    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/70/Front_view_of_a_resting_Canis_lupus_ssp.jpg/255px-Front_view_of_a_resting_Canis_lupus_ssp.jpg"
+        alt="A North American wolf"> <br>
+
+(<var>a</var><sup>2</sup> + <var>b</var><sup>2</sup>) = <var>a</var><sup>2</sup> + 2<var>a</var><var>b</var> + <var>b</var><sup>2</sup> <br>
+<var>x</var><sub>1</sub>, <var>x</var><sub>2</sub> ... <var>x</var><sub>n</sub>. <br> <br>
 
 
 
+<table>
+    <tr>
+        <th colspan="5">Table exercise</th>
+    </tr>
+
+    <tr>
+        <td colspan="3">Title goes here</td>
+        <td>A</td>
+        <td>B</td>
+    </tr>
+
+    <tr>
+        <td rowspan="3">C</td>
+        <td>D</td>
+        <td>E</td>
+        <td>F</td>
+        <td>G</td>
+    </tr>
+
+    <tr>
+        <td>H</td>
+        <td colspan="2">I</td>
+        <td rowspan="2">J</td>
+    </tr>
+
+    <tr>
+        <td>K</td>
+        <td>L</td>
+        <td>M</td>
+    </tr>
+
+    <tr>
+        <td>N</td>
+        <td colspan="4">O</td>
+    </tr>
+
+</table>
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-        </table>
 
 </body>
 
