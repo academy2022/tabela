@@ -1,50 +1,158 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tabela</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Chicken - Eurostep</title>
+    <style>
+        table, th, td {
+            border: 1px solid #000;
+            text-align: center;
+        }
+        
+    </style>
 </head>
+
 <body>
-    <table style="width: 50%;">
-        <thead>
-        </thead>
+    <h1>Tabela</h1>
+    <br>
+    <br>
 
-        <tbody>
+<table>
+    <thead>
+      <tr>
+        <th colspan="2">&nbsp</th>
+        <th>Name</th>
+        <th>Mass <br>(10 <sup>24</sup> kg)</th>
+        <th>Diameter <br> (km)</th>
+        <th>Density <br> (kg/m<sup>3</sup>)</th>
+        <th>Gravity <br> (m/s&sup2)</th>
+        <th>Length of <br> day (hours)</th>
+        <th>Distance from <br> Sun (10 <sup>6</sup> km)</th>
+        <th>Mean <br> temperature <br>(&deg C)</th>
+        <th>Number of <br> moons</th>
+        <th>Notes</th>
+     </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <th colspan="2" rowspan="4"> Terrestrial planets</th>
+            <td>Mercury</td>
+            <td>0.330</td>
+            <td>4.789</td>
+            <td>5427</td>
+            <td>3.7</td>
+            <td>4222.6</td>
+            <td>57.9</td>
+            <td>167</td>
+            <td>0</td>
+            <th>Closet to the Sun</th>
+        </tr>
+        <tr>
+            <td>Venus</td>
+            <td>4.87</td>
+            <td>12.789</td>
+            <td>5243</td>
+            <td>8.9</td>
+            <td>2802.0</td>
+            <td>108.9</td>
+            <td>464</td>
+            <td>0</td>
+            <td>&nbsp</td>
+        </tr>
+        <tr>
+            <td>Earth</td>
+            <td>5.97</td>
+            <td>12.426</td>
+            <td>5517</td>
+            <td>9.8</td>
+            <td>02.6</td>
+            <td>57.9</td>
+            <td>15</td>
+            <td>1</td>
+            <td>Our world</td>
+        </tr>
+        <tr>
+            <td>Mars</td>
+            <td>5.97</td>
+            <td>12.426</td>
+            <td>5517</td>
+            <td>9.8</td>
+            <td>02.6</td>
+            <td>57.9</td>
+            <td>15</td>
+            <td>2</td>
+            <td>The red planet</td>
+        </tr>
+        <tr>
+            <th colspan="1" rowspan="4">Jovian <br> planets</th>
+            <th rowspan="2"> Gas <br> giants</td>
+            <td>Jupiter</td>
+            <td>5.97</td>
+            <td>12.426</td>
+            <td>5517</td>
+            <td>9.8</td>
+            <td>02.6</td>
+            <td>57.9</td>
+            <td>15</td>
+            <td>67</td>
+            <td>The pargest planet</td>
+        </tr>
+        <tr>
+            <td>Saturn</td>
+            <td>5.97</td>
+            <td>12.426</td>
+            <td>5517</td>
+            <td>9.8</td>
+            <td>02.6</td>
+            <td>57.9</td>
+            <td>15</td>
+            <td>67</td>
+            <td>&nbsp</td>
+        </tr>
+        <tr>
+            <th rowspan="2"> Ice <br> giants</td>
+                <td>Uranus</td>
+                <td>5.97</td>
+                <td>12.426</td>
+                <td>5517</td>
+                <td>9.8</td>
+                <td>02.6</td>
+                <td>57.9</td>
+                <td>15</td>
+                <td>67</td>
+                <td>&nbsp</td>
+        </tr>
+        <tr>
+                <td>Neptun</td>
+                <td>5.97</td>
+                <td>12.426</td>
+                <td>5517</td>
+                <td>11.8</td>
+                <td>16.1</td>
+                <td>4457.9</td>
+                <td>-200</td>
+                <td>14</td>
+                <td>&nbsp</td>
+        </tr>
+        <tr>
+            <th colspan="2">Dwarf planets</th>
+            <td>Pluto</td>
+                <td>0.0146</td>
+                <td>2,370</td>
+                <td>2095</td>
+                <td>0.7</td>
+                <td>153.3</td>
+                <td>5906.4</td>
+                <td>-225</td>
+                <td>5</td>
+                <td> Declassified as a planet in 2006, <br> but this <a href="https://en.wikipedia.org/wiki/Wolf"> remains <br> controversial</a></td>
+        </tr>
 
-            <th colspan="5" >Table exercise</th>
-            <tr>
-                <td colspan="3">Title goes here</td>
-                <td>A</td>
-                <td>B</td>
-            </tr>
-            <tr>
-                <td rowspan="3">C</td>
-                <td>D</td>
-                <td>E</td>
-                <td>F</td>
-                <td>G</td>
-            </tr>
-            <tr>
-                <td>H</td>
-                <td colspan="2">I</td>
-                <td rowspan="2">J</td>
-            </tr>
-            <tr>
-                <td>K</td>
-                <td>L</td>
-                <td>M</td>
-            </tr>
+    </tbody>
 
-            <tr>
-                <td>N</td>
-                <td colspan="4">O</td>
-            </tr>
 
-             </tbody>
-    </table>
 
-</body>
-</html>
+</table>
